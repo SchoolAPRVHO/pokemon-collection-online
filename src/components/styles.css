@@ -7,7 +7,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 2rem;
     align-items: center;
     background-color: #FF4500;
     color: #fff;
@@ -31,6 +30,7 @@ body {
     color: inherit;
     margin-left: 16px; 
     padding: 1rem;
+    border-radius: 2rem;
   }
 
   .navItem:hover {
@@ -96,13 +96,6 @@ body {
   padding: 16px;
 }
 
-.backButton {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 16px;
-  background-color: #FF4500;
-}
 
 
 .form {
@@ -154,3 +147,46 @@ body {
   background-color: #ff0000;
   cursor: pointer;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 5rem 0 0 0 ;
+}
+
+.pokemonImage {
+  width: 10rem;
+  margin-bottom: 16px;
+  background-color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif; 
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 18px;
+  font-family: 'Comic Sans MS', sans-serif; 
+  margin-bottom: 16px;
+}
+
+.backButton {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Comic Sans MS', sans-serif; 
+}
+
+.backButton:hover {
+  background-color: #ff0000;
+}
+
+
