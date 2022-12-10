@@ -1,10 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `De Pokemon Collectie`,
+    description: `Onze Pokemon website biedt allerlei informatie over de verschillende Pokemon die er bestaan. Of je nu op zoek bent naar de statussen van je favoriete Pokemon, of je wilt meer weten over hun aanvallen en vaardigheden, je vindt het hier allemaal. Onze website is gemaakt met Gatsby, wat betekent dat het snel en gemakkelijk te gebruiken is, zelfs op mobiele apparaten. Zoek naar jouw favoriete Pokemon of blader door onze lijst met alle Pokemon om te zien wat er te ontdekken valt.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    
+  ],
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -16,18 +21,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-source-wordpress",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        /*
+         * De volledige URL van je Headless WordPress site's GraphQL API.
+         * Voorbeeld : "https://www.example-site.com/graphql"
+         */
+        url: "http://first-gen-pokmon-collection.local/graphql",
       },
     },
   ],

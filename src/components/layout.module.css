@@ -1,7 +1,27 @@
 .nav {
-    background-color: #0080ff;
-    font-size: 5rem;
-}
-.navLink {
-    margin: 1rem;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF4500;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .navBrand { 
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navItem { 
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 0;
+  }
+  
+  .navItem:hover {
+    color: #ccc;
+  }
+  
