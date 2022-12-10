@@ -10,7 +10,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const IndexPage = () => {
   const data = useStaticQuery(graphql`query {
     allWpPage(
-      filter: {homepagefields: {homepageTitle: {eq: "Gonna Cathch Them All"}}}
+      filter: {homepagefields: {homepageTitle: {eq: "Gonna Catch Them All"}}}
     ) {
       edges {
         node {
@@ -20,13 +20,23 @@ const IndexPage = () => {
             homepageFeaturedPokemon {
               ... on WpPokemon {
                 id
-                uri
+                slug
+                pokemonFieldGroup {
+                  title
+                  picture {
+                    localFile {
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
               }
             }
             homepagePicture {
               localFile {
                 childImageSharp {
-                  gatsbyImageData(placeholder: BLURRED)
+                  gatsbyImageData
                 }
               }
             }
@@ -34,16 +44,26 @@ const IndexPage = () => {
         }
       }
     }
-  }`)  
+  }
+  `)  
   const {homepageTitle, homepageDescription, homepageFeaturedPokemon, homepagePicture} = data.allWpPage.edges[0].node.homepagefields;
   const image = getImage(homepagePicture.localFile);
   return (
     <>
         <Layout pageTitle={homepageTitle}>
-        <div className='homepage pokemonPage'>
+        <div className='homepage'>
           <p className='homepageText'>{homepageDescription}</p>
           <GatsbyImage className='homepageImage' image={image} alt={"Dit is een alt"} />
         </div>
+        <h2 className='pageTitle'>Featured Pokémon</h2>
+        {homepageFeaturedPokemon.map((pokemon)=> {
+          return (
+            <div className='pokemonCard'>
+              <h2>{pokemon.slug}</h2>
+              {/* <img src={pokemon.image.sourceUrl} alt={pokemon.name} /> */}
+            </div>
+          )
+        })}
         </Layout>
     </>
   )
