@@ -22,7 +22,7 @@ const Contact = () => {
         Name:
       </label><br />
         <input
-          type="hidden" 
+          type="text" 
           name="contactForm"
           value={name}
           onChange={event => setName(event.target.value)}
@@ -36,7 +36,7 @@ const Contact = () => {
         Email:
       </label><br />
         <input
-          type="hidden" 
+          type="email" 
           name="contactForm"
           value={email}
           onChange={event => setEmail(event.target.value)}
@@ -50,7 +50,7 @@ const Contact = () => {
         Subject:
       </label><br />
         <input
-          type="hidden" 
+          type="text" 
           name="contactForm"
           value={subject}
           onChange={event => setSubject(event.target.value)}
@@ -71,7 +71,6 @@ const Contact = () => {
           id="question"
           required={true}
           placeholder="Question"
-          type="hidden" 
           name="contactForm"
         />
       <br />
