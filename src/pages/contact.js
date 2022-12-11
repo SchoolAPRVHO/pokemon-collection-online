@@ -17,7 +17,7 @@ const Contact = () => {
 
   return (
     <Layout pageTitle="Contact">
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="form" name='contactForm' data-netlify="true">
       <label className='formLabel' htmlFor="fullName">
         Name:
       </label><br />
@@ -27,6 +27,8 @@ const Contact = () => {
           onChange={event => setName(event.target.value)}
           className="formInput"
           id="fullName"
+          required={true}
+          placeholder="Fullname"
         />
       <br />
       <label className='formLabel' htmlFor="email">
@@ -38,6 +40,8 @@ const Contact = () => {
           onChange={event => setEmail(event.target.value)}
           className="formInput"
           id="email"
+          required={true}
+          placeholder="Email"
         />
       <br />
       <label className='formLabel' htmlFor="subject">
@@ -49,6 +53,8 @@ const Contact = () => {
           onChange={event => setSubject(event.target.value)}
           className="formInput"
           id="subject"
+          required={true}
+          placeholder="Subject"
         />
       <br />
       <label className='formLabel' htmlFor="question">
@@ -60,6 +66,8 @@ const Contact = () => {
           onChange={event => setQuestion(event.target.value)}
           className="formInput"
           id="question"
+          required={true}
+          placeholder="Question"
         />
       <br />
       <button type="submit" className="formButton">Submit</button>
