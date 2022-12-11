@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <Layout pageTitle="Contact">
     <form onSubmit={handleSubmit} className="form">
-      <label className='formLabel'>
+      <label className='formLabel' htmlFor="fullName">
         Name:
       </label><br />
         <input
@@ -26,9 +26,10 @@ const Contact = () => {
           value={name}
           onChange={event => setName(event.target.value)}
           className="formInput"
+          id="fullName"
         />
       <br />
-      <label className='formLabel'>
+      <label className='formLabel' htmlFor="email">
         Email:
       </label><br />
         <input
@@ -36,9 +37,10 @@ const Contact = () => {
           value={email}
           onChange={event => setEmail(event.target.value)}
           className="formInput"
+          id="email"
         />
       <br />
-      <label className='formLabel'>
+      <label className='formLabel' htmlFor="subject">
         Subject:
       </label><br />
         <input
@@ -46,9 +48,10 @@ const Contact = () => {
           value={subject}
           onChange={event => setSubject(event.target.value)}
           className="formInput"
+          id="subject"
         />
       <br />
-      <label className='formLabel'>
+      <label className='formLabel' htmlFor="question">
         Question:
       </label><br />
         <textarea
@@ -56,6 +59,7 @@ const Contact = () => {
           value={question}
           onChange={event => setQuestion(event.target.value)}
           className="formInput"
+          id="question"
         />
       <br />
       <button type="submit" className="formButton">Submit</button>
