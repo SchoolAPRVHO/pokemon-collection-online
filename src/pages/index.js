@@ -10,7 +10,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const IndexPage = () => {
   const data = useStaticQuery(graphql`query {
     allWpPage(
-      filter: {homepagefields: {homepageTitle: {eq: "Gonna Catch Them All"}}}
+      filter: {homepagefields: {homepageTitle: {eq: "Gonna Cathch Them All"}}}
     ) {
       edges {
         node {
