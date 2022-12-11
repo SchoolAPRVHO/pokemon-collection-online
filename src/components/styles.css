@@ -14,17 +14,6 @@ body {
   background-position: right bottom, left top;
 }
 
-.background {
-  background: linear-gradient(
-    to bottom,
-    #ff4500,
-    #ff8c00
-  );
-  background-image: url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"),
-    url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"); 
-  background-repeat: no-repeat, repeat; 
-  background-position: right bottom, left top;
-}
 h1, .h1 {
   background-color: #9B2A00;
   color: white;
@@ -233,7 +222,7 @@ h2, .h2 {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-color: #f00;
   background-color: #ffe8e8;
-  width: fit-content;
+  width: 200px;
   min-width: 10rem;
 }
 

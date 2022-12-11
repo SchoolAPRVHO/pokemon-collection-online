@@ -6,7 +6,7 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const Pokemon = () => {
   const data = useStaticQuery(graphql`
   query {
-    wpPage(title: {eq: "Pokémon Page"}) {
+    wpPage(title: {eq: "Pokemon Page"}) {
       id
       pokemonpagefields {
         pokemonpageDescription
