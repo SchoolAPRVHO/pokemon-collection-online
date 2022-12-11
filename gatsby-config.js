@@ -29,7 +29,7 @@ module.exports = {
          * De volledige URL van je Headless WordPress site's GraphQL API.
          * Voorbeeld : "https://www.example-site.com/graphql"
          */
-        url: "http://first-gen-pokmon-collection.local/graphql",
+        url: "http://wordpress.afdelingbrabo.be/graphql",
       },
     },
   ],
