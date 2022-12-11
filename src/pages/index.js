@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import Layout from '../components/layout'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import "../components/styles.css"
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
@@ -52,18 +52,24 @@ const IndexPage = () => {
     <>
         <Layout pageTitle={homepageTitle}>
         <div className='homepage'>
-          <p className='homepageText'>{homepageDescription}</p>
+          <p className='descriptionText'>{homepageDescription}</p>
           <GatsbyImage className='homepageImage' image={image} alt={"Dit is een alt"} />
         </div>
         <h2 className='pageTitle'>Featured Pokémon</h2>
-        {homepageFeaturedPokemon.map((pokemon)=> {
-          return (
-            <div className='pokemonCard'>
-              <h2>{pokemon.slug}</h2>
-              {/* <img src={pokemon.image.sourceUrl} alt={pokemon.name} /> */}
-            </div>
-          )
-        })}
+        <div class="featuredPokemonFlex">
+          {homepageFeaturedPokemon.map((pokemon)=> {
+            const image = getImage(pokemon.pokemonFieldGroup.picture.localFile);
+            const name = pokemon.pokemonFieldGroup.title
+            return (
+              <Link to={`/pokemon/${pokemon.slug}`}>
+                <div className='pokemonCard'>
+                  <h2 className='h2CardStyle'>{name}</h2>
+                  <GatsbyImage image={image} alt={name} />
+                </div>
+              </Link>
+            )
+          })}
+        </div>
         </Layout>
     </>
   )

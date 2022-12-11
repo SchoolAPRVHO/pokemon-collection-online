@@ -1,94 +1,121 @@
 /* styles.css */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', sans-serif; 
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #ff4500,
+    #ff8c00
+  );
+  background-image: url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"),
+    url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"); 
+  background-repeat: no-repeat, repeat; 
+  background-position: right bottom, left top;
+}
+
+.background {
+  background: linear-gradient(
+    to bottom,
+    #ff4500,
+    #ff8c00
+  );
+  background-image: url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"),
+    url("https://www.pngmart.com/files/3/Pokeball-Transparent-Background.png"); 
+  background-repeat: no-repeat, repeat; 
+  background-position: right bottom, left top;
+}
+h1, .h1 {
+  background-color: #9B2A00;
+  color: white;
+  width: fit-content;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 2rem;
+}
+
+h2, .h2 {
+  background-color: #C63500;
+  color: white;
+  width: fit-content;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 2rem;
 }
 .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #FF4500;
-    color: #fff;
-    padding: 16px; 
-  }
-  
-  .navBrand {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', sans-serif;
-    text-decoration: none;
-    color: inherit;
-    margin-left: 16px; 
-  }
-  
-  .navItem {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', sans-serif;
-    text-decoration: none;
-    color: inherit;
-    margin-left: 16px; 
-    padding: 1rem;
-    border-radius: 2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ff4500;
+  color: #fff;
+  margin: -1rem 0;
+  padding: -1rem;
+}
 
-  .navItem:hover {
-    background-color: white;
-    color: #FF4500;
-  }
+.navBrand {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 2rem;
+  padding: -1rem;
+}
+
+.navItem {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", sans-serif;
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.navItem:hover {
+  background-color: white;
+  color: #ff4500;
+}
 
 .homepage {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
   align-items: center;
   align-self: center;
-  width: 75%; 
+  width: 75%;
   margin: auto;
-  }
-  
-  .homepageImage {
-    width: 15rem;
-    aspect-ratio: 1;
-    margin-right: 16px;
-    border-radius: 2rem; 
-  }
-  
-  .homepageText {
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Comic Sans MS', sans-serif;
-    width: 75%;
-    min-width: 300px;
-  }
+}
 
-  .colorToTheWholePage {
-    background-image: linear-gradient(to bottom, #fa91a1, #f9b8c2);
-    z-index: -1;
-  }
-.pokemonPage {
-  background-image: linear-gradient(to bottom, #fa91a1, #f9b8c2);
-  height: 100vh;
-  width: 100%;
-  /* z-index: 1; */
+.homepageImage {
+  width: 13rem;
+  min-width: 200px;
+  aspect-ratio: 1;
+  margin-right: 16px;
+  border-radius: 2rem;
+}
+
+.descriptionText {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Comic Sans MS", sans-serif;
+  width: 75%;
+  min-width: 300px;
 }
 
 .pageTitle {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   margin-bottom: 16px;
-  color: #000;
 }
 
 .pokemonImage {
   display: block;
-  margin:0 auto 16px auto;
+  margin: 0 auto 16px auto;
   width: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -102,15 +129,13 @@ body {
   padding: 16px;
 }
 
-
-
 .form {
   display: flex;
   flex-direction: column;
-  width: 50%; 
-  margin: auto;
+  width: 50%;
+  margin: 3rem auto;
   padding: 1rem;
-  background-color:  #f9b8c2;
+  background-color: #f9b8c2;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -118,14 +143,14 @@ body {
 .formTitle {
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   text-align: center;
   margin-bottom: 16px;
   color: #333;
 }
 
 .formInput {
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   margin-bottom: 16px;
   padding: 8px;
   border-radius: 4px;
@@ -135,16 +160,16 @@ body {
 .formButton {
   padding: 8px;
   border-radius: 4px;
-  background-color: #FF4500;
+  background-color: #ff4500;
   color: #fff;
   border: none;
   font-size: 14px;
   font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .formLabel {
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -160,19 +185,19 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-  padding: 5rem 0 0 0 ;
+  padding: 5rem 0 0 0;
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   margin-bottom: 8px;
 }
 
 .description {
   font-size: 18px;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
   margin-bottom: 16px;
 }
 
@@ -182,7 +207,7 @@ body {
   background-color: #333;
   color: #fff;
   text-decoration: none;
-  font-family: 'Comic Sans MS', sans-serif; 
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .backButton:hover {
@@ -206,9 +231,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-color: #F00;
+  border-color: #f00;
   background-color: #ffe8e8;
-  width:fit-content;
+  width: fit-content;
+  min-width: 10rem;
+}
+
+.pokemonCard:hover {
+  background-color: #fdd9d9;
 }
 
 /* Defineer de stijlen voor de afbeelding van de Pokémon */
@@ -219,11 +249,13 @@ body {
 }
 
 /* Defineer de stijlen voor de naam van de Pokémon */
-.pokemonCard h2 {
+.pokemonCard h2, .h2CardStyle {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
   color: #333;
+  background-color: transparent;
+  padding: none;
 }
 
 /* Defineer de stijlen voor de knop/link op de Pokémon-kaart */
@@ -232,7 +264,7 @@ body {
   margin-top: 20px;
   padding: 10px;
   text-decoration: none;
-  background-color: #FF4500;
+  background-color: #ff4500;
   color: #fff;
   border-radius: 5px;
 }
@@ -248,12 +280,13 @@ body {
   border-collapse: collapse;
 }
 
-.pokemonTable tbody th, .pokemonTable tbody td {
+.pokemonTable tbody th,
+.pokemonTable tbody td {
   padding: 0 0 1rem 1rem;
   margin: 0 0 1rem 0;
   text-align: left;
   vertical-align: top;
-  border-bottom: 2px solid #FF4500;
+  border-bottom: 2px solid #ff4500;
 }
 
 .individualPokemonImage {
@@ -271,4 +304,30 @@ body {
   justify-content: space-around;
   width: 80%;
   min-width: 43rem;
+}
+
+.featuredPokemonFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  text-decoration: none;
+  padding: 0 0 3rem 0;
+}
+
+.pokedex {
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.tempFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 75%;
+  margin: auto;
+  align-self: center;
 }

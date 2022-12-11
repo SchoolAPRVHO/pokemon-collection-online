@@ -6,6 +6,20 @@ import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 const Pokemon = () => {
   const data = useStaticQuery(graphql`
   query {
+    wpPage(title: {eq: "Pokemon Page"}) {
+      id
+      pokemonpagefields {
+        pokemonpageDescription
+        pokemonpagePicture {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+      title
+    }
     allWpPokemon {
       edges {
         node {
@@ -28,17 +42,25 @@ const Pokemon = () => {
     }
   }
   `)
-  const pokemonData = data.allWpPokemon.edges
+ 
+  const pokemonData = data.allWpPokemon.edges;
+  const {pokemonpageDescription, pokemonpagePicture} = data.wpPage.pokemonpagefields;
+  const title = data.wpPage.title;
+  const imagePage = getImage(pokemonpagePicture.localFile);
   return (
-    <Layout pageTitle={"Pokemon Overview"}>
+    <Layout pageTitle={title}>
+      <div class="tempFlex">
+        <p className="descriptionText">{pokemonpageDescription}</p>
+        <GatsbyImage className="pokedex" image={imagePage} alt={"Pokedex"} />
+      </div>
       <div class="pokemonContainer">
         {pokemonData.map((pokemon) => {
-          const {title} = pokemon.node.pokemonFieldGroup
+          const name = pokemon.node.pokemonFieldGroup.title
           const image = getImage(pokemon.node.pokemonFieldGroup.picture.localFile)
           return (
             <div className="pokemonCard">
-              <GatsbyImage image={image} alt={title} />
-              <h2>{title}</h2>
+              <GatsbyImage image={image} alt={name} />
+              <h2>{name}</h2>
               <Link to={`/pokemon/${pokemon.node.slug}`}>View Pokemon</Link>
             </div>
           )

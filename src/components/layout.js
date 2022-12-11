@@ -18,18 +18,17 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
   return (
-    <div className="pokemonPage">
-        <div class="colorToTheWholePage">
+    <>
+      <div class="background">
         <title>
           {pageTitle} | {title}
         </title>
         <nav className={"nav"}>
-          <h1 className={"navBrand"}>{title}</h1>
+          <Link to="/">
+            <h1 className={"navBrand"}>{title}</h1>
+          </Link>
           <Link className={"navItem"} to="/">
             Home
-          </Link>
-          <Link className={"navItem"} to="/about">
-            About
           </Link>
           <Link className={"navItem"} to="/pokemon">
             Pokemon
@@ -43,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
           {children}
         </main>
       </div>
-    </div>
+    </>
   )
 }
 
