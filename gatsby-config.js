@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `De Pokemon Collectie`,
-    description: `Onze Pokemon website biedt allerlei informatie over de verschillende Pokemon die er bestaan. Of je nu op zoek bent naar de statussen van je favoriete Pokemon, of je wilt meer weten over hun aanvallen en vaardigheden, je vindt het hier allemaal. Onze website is gemaakt met Gatsby, wat betekent dat het snel en gemakkelijk te gebruiken is, zelfs op mobiele apparaten. Zoek naar jouw favoriete Pokemon of blader door onze lijst met alle Pokemon om te zien wat er te ontdekken valt.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `The Pokemon Collection`,
+    description: `Our Pokemon website provides all sorts of information about the various Pokemon that exist. Whether you're looking for the stats of your favorite Pokemon, or want to learn more about their attacks and abilities, you can find it all here. Our website is built with Gatsby, which means it's fast and easy to use, even on mobile devices. Search for your favorite Pokemon or browse through our list of all Pokemon to see what's in store.`,
+    author: `RavenMyrrdin`,
+    siteUrl: `https://leafy-parfait-b2af0c.netlify.app/`,
+    favicon: `https://www.flaticon.com/free-icons/pokemon`,
   },
   plugins: [
     "gatsby-plugin-image",
