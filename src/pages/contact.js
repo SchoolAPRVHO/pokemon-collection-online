@@ -3,17 +3,6 @@ import Layout from '../components/layout'
 import "../components/styles.css"
 
 const Contact = () => {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [subject, setSubject] = React.useState("");
-  const [question, setQuestion] = React.useState("");
-
-  const handleSubmit = event => {
-    event.preventDefault();
-
-    // Send the form data to the server
-    // and handle the response here...
-  };
 
   return (
     <Layout pageTitle="Contact">
@@ -23,9 +12,7 @@ const Contact = () => {
       </label><br />
         <input
           type="text" 
-          name="contactForm"
-          value={name}
-          onChange={event => setName(event.target.value)}
+          name="name"
           className="formInput"
           id="fullName"
           required={true}
@@ -37,9 +24,7 @@ const Contact = () => {
       </label><br />
         <input
           type="email" 
-          name="contactForm"
-          value={email}
-          onChange={event => setEmail(event.target.value)}
+          name="email"
           className="formInput"
           id="email"
           required={true}
@@ -51,9 +36,7 @@ const Contact = () => {
       </label><br />
         <input
           type="text" 
-          name="contactForm"
-          value={subject}
-          onChange={event => setSubject(event.target.value)}
+          name="subject"
           className="formInput"
           id="subject"
           required={true}
@@ -65,13 +48,11 @@ const Contact = () => {
       </label><br />
         <textarea
           rows="3"
-          value={question}
-          onChange={event => setQuestion(event.target.value)}
           className="formInput"
           id="question"
           required={true}
           placeholder="Question"
-          name="contactForm"
+          name='question'
         />
       <br />
       <button type="submit" className="formButton">Submit</button>
