@@ -320,3 +320,7 @@ h2, .h2 {
   margin: auto;
   align-self: center;
 }
+
+.linkStyle {
+  text-decoration: none;
+}

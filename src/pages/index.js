@@ -61,7 +61,7 @@ const IndexPage = () => {
             const image = getImage(pokemon.pokemonFieldGroup.picture.localFile);
             const name = pokemon.pokemonFieldGroup.title
             return (
-              <Link to={`/pokemon/${pokemon.slug}`}>
+              <Link to={`/pokemon/${pokemon.slug}`} className="linkStyle">
                 <div className='pokemonCard'>
                   <h2 className='h2CardStyle'>{name}</h2>
                   <GatsbyImage image={image} alt={name} />
