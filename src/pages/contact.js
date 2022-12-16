@@ -55,6 +55,7 @@ const Contact = () => {
           name='question'
         />
       <br />
+      <input type="hidden" name="form-name" value="contactForm"></input>
       <button type="submit" className="formButton">Submit</button>
     </form>
     </Layout>
