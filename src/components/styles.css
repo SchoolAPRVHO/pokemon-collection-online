@@ -219,8 +219,8 @@ h2, .h2 {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-color: #f00;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   background-color: #ffe8e8;
   width: 200px;
   min-width: 10rem;
@@ -228,6 +228,7 @@ h2, .h2 {
 
 .pokemonCard:hover {
   background-color: #fdd9d9;
+  transform: translateY(-5px);
 }
 
 /* Defineer de stijlen voor de afbeelding van de Pokémon */
@@ -323,4 +324,8 @@ h2, .h2 {
 
 .linkStyle {
   text-decoration: none;
+}
+
+.center {
+  text-align: center;
 }
