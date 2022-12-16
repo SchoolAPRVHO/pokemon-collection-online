@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <Layout pageTitle="Contact">
-    <form className="form" name='contactForm' data-netlify="true">
+    <form className="form" name='contactForm' method='post' data-netlify="true">
       <label className='formLabel' htmlFor="fullName">
         Name:
       </label><br />
